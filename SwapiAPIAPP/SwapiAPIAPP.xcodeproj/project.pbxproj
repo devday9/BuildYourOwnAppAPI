@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		C34CBC89251BFD740019D188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBC88251BFD740019D188 /* AppDelegate.swift */; };
 		C34CBC8B251BFD740019D188 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBC8A251BFD740019D188 /* SceneDelegate.swift */; };
-		C34CBC8D251BFD740019D188 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBC8C251BFD740019D188 /* ViewController.swift */; };
 		C34CBC90251BFD740019D188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34CBC8E251BFD740019D188 /* Main.storyboard */; };
 		C34CBC92251BFD770019D188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C34CBC91251BFD770019D188 /* Assets.xcassets */; };
 		C34CBC95251BFD770019D188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34CBC93251BFD770019D188 /* LaunchScreen.storyboard */; };
+		C34CBCA9251C06280019D188 /* StarShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBCA8251C06280019D188 /* StarShip.swift */; };
+		C34CBCAD251C0A600019D188 /* StarShipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBCAC251C0A600019D188 /* StarShipController.swift */; };
+		C34CBCB0251C0BB10019D188 /* StarShipError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBCAF251C0BB10019D188 /* StarShipError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C34CBC85251BFD740019D188 /* SwapiAPIAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwapiAPIAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34CBC88251BFD740019D188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C34CBC8A251BFD740019D188 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C34CBC8C251BFD740019D188 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C34CBC8F251BFD740019D188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C34CBC91251BFD770019D188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C34CBC94251BFD770019D188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C34CBC96251BFD770019D188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C34CBCA8251C06280019D188 /* StarShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShip.swift; sourceTree = "<group>"; };
+		C34CBCAC251C0A600019D188 /* StarShipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipController.swift; sourceTree = "<group>"; };
+		C34CBCAF251C0BB10019D188 /* StarShipError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				C34CBC87251BFD740019D188 /* SwapiAPIAPP */,
-				C34CBC9D251BFD960019D188 /* Resources */,
 				C34CBC86251BFD740019D188 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,8 +64,7 @@
 				C34CBCA1251BFDDC0019D188 /* Views */,
 				C34CBCA4251BFDFF0019D188 /* Controllers */,
 				C34CBCA5251BFE040019D188 /* HelperAndExtensions */,
-				C34CBC8C251BFD740019D188 /* ViewController.swift */,
-				C34CBC8E251BFD740019D188 /* Main.storyboard */,
+				C34CBC9D251BFD960019D188 /* Resources */,
 			);
 			path = SwapiAPIAPP;
 			sourceTree = "<group>";
@@ -82,6 +84,7 @@
 		C34CBCA0251BFDD40019D188 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C34CBCA8251C06280019D188 /* StarShip.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +108,7 @@
 		C34CBCA3251BFDF20019D188 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				C34CBC8E251BFD740019D188 /* Main.storyboard */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -112,8 +116,8 @@
 		C34CBCA4251BFDFF0019D188 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C34CBCA7251BFE1E0019D188 /* ViewControllers */,
 				C34CBCA6251BFE150019D188 /* ModelControllers */,
+				C34CBCA7251BFE1E0019D188 /* ViewControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -121,6 +125,7 @@
 		C34CBCA5251BFE040019D188 /* HelperAndExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				C34CBCAF251C0BB10019D188 /* StarShipError.swift */,
 			);
 			path = HelperAndExtensions;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 		C34CBCA6251BFE150019D188 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C34CBCAC251C0A600019D188 /* StarShipController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -209,9 +215,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C34CBC8D251BFD740019D188 /* ViewController.swift in Sources */,
 				C34CBC89251BFD740019D188 /* AppDelegate.swift in Sources */,
+				C34CBCAD251C0A600019D188 /* StarShipController.swift in Sources */,
 				C34CBC8B251BFD740019D188 /* SceneDelegate.swift in Sources */,
+				C34CBCA9251C06280019D188 /* StarShip.swift in Sources */,
+				C34CBCB0251C0BB10019D188 /* StarShipError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
