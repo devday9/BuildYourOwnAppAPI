@@ -3,26 +3,39 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Starships-->
         <scene sceneID="Uk8-mN-UIm">
             <objects>
-                <tableViewController id="33R-U5-Cmr" sceneMemberID="viewController">
+                <tableViewController id="33R-U5-Cmr" customClass="StarshipListTableViewController" customModule="SwapiAPIAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="na5-A9-jZz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IKt-w8-mpd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="starshipCell" textLabel="3La-lj-BB4" style="IBUITableViewCellStyleDefault" id="IKt-w8-mpd">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IKt-w8-mpd" id="TN6-bS-zao">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3La-lj-BB4">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tLm-L2-hSt" kind="show" id="3ay-iF-ek2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -30,11 +43,58 @@
                             <outlet property="delegate" destination="33R-U5-Cmr" id="On8-2L-sWk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="HNg-0Z-moH"/>
+                    <navigationItem key="navigationItem" title="Starships" id="HNg-0Z-moH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KxZ-ma-Iuw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="205" y="-3"/>
+        </scene>
+        <!--Starship Detail View Controller-->
+        <scene sceneID="FTo-A0-4OB">
+            <objects>
+                <viewController id="tLm-L2-hSt" customClass="StarshipDetailViewController" customModule="SwapiAPIAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pGj-AK-x5U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="YrI-s7-5lV">
+                                <rect key="frame" x="8" y="168" width="398" height="167.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(starship model)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6h-Uy-FZ8">
+                                        <rect key="frame" x="137" y="0.0" width="124.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(passenger capacity)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8D-hp-wf3">
+                                        <rect key="frame" x="119" y="73.5" width="160.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(speed)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TS2-c4-nEl">
+                                        <rect key="frame" x="169.5" y="147" width="59.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WF6-K6-uP8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YrI-s7-5lV" firstAttribute="top" secondItem="WF6-K6-uP8" secondAttribute="top" constant="80" id="3kC-Me-3DK"/>
+                            <constraint firstItem="WF6-K6-uP8" firstAttribute="trailing" secondItem="YrI-s7-5lV" secondAttribute="trailing" constant="8" id="6XU-S6-e0L"/>
+                            <constraint firstItem="YrI-s7-5lV" firstAttribute="centerX" secondItem="WF6-K6-uP8" secondAttribute="centerX" id="Yet-MG-Heq"/>
+                            <constraint firstItem="YrI-s7-5lV" firstAttribute="leading" secondItem="WF6-K6-uP8" secondAttribute="leading" constant="8" id="v4T-xK-0I8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Ie-t1-sBk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dyr-N0-P7A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="-3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XiX-yc-4Uo">
@@ -50,7 +110,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cq0-7f-iDx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-686" y="-3"/>
+            <point key="canvasLocation" x="-551" y="-3"/>
         </scene>
     </scenes>
     <resources>

@@ -31,19 +31,10 @@ class StarShipController {
             do {
                 let topLevelDictionary = try JSONDecoder().decode(TopLevelDictionary.self, from: data)
                 let secondLevelObjects = topLevelDictionary.results
-                
-                var starshipsPlaceholderArray: [SecondLevelObjects] = []
-                
-                for object in secondLevelObjects {
-                    let starship = object.model
-                    starshipsPlaceholderArray.append(starship)
-                }
-                completion(.success(starshipsPlaceholderArray))
+                return completion(.success(secondLevelObjects))
             } catch {
                 return completion(.failure(.thrownError(error)))
             }
         }.resume()
     }
-    
-    
 }//END OF CLASS

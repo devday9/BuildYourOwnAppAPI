@@ -15,6 +15,8 @@
 		C34CBCA9251C06280019D188 /* StarShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBCA8251C06280019D188 /* StarShip.swift */; };
 		C34CBCAD251C0A600019D188 /* StarShipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBCAC251C0A600019D188 /* StarShipController.swift */; };
 		C34CBCB0251C0BB10019D188 /* StarShipError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBCAF251C0BB10019D188 /* StarShipError.swift */; };
+		C34CBD50251D4B4A0019D188 /* StarshipListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBD4F251D4B4A0019D188 /* StarshipListTableViewController.swift */; };
+		C34CBD53251D4B5F0019D188 /* StarshipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBD52251D4B5F0019D188 /* StarshipDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		C34CBCA8251C06280019D188 /* StarShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShip.swift; sourceTree = "<group>"; };
 		C34CBCAC251C0A600019D188 /* StarShipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipController.swift; sourceTree = "<group>"; };
 		C34CBCAF251C0BB10019D188 /* StarShipError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipError.swift; sourceTree = "<group>"; };
+		C34CBD4F251D4B4A0019D188 /* StarshipListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipListTableViewController.swift; sourceTree = "<group>"; };
+		C34CBD52251D4B5F0019D188 /* StarshipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,16 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				C34CBCA3251BFDF20019D188 /* StoryBoards */,
-				C34CBCA2251BFDE40019D188 /* CustomViews */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		C34CBCA2251BFDE40019D188 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		C34CBCA3251BFDF20019D188 /* StoryBoards */ = {
@@ -141,6 +137,8 @@
 		C34CBCA7251BFE1E0019D188 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C34CBD4F251D4B4A0019D188 /* StarshipListTableViewController.swift */,
+				C34CBD52251D4B5F0019D188 /* StarshipDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,6 +214,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34CBC89251BFD740019D188 /* AppDelegate.swift in Sources */,
+				C34CBD53251D4B5F0019D188 /* StarshipDetailViewController.swift in Sources */,
+				C34CBD50251D4B4A0019D188 /* StarshipListTableViewController.swift in Sources */,
 				C34CBCAD251C0A600019D188 /* StarShipController.swift in Sources */,
 				C34CBC8B251BFD740019D188 /* SceneDelegate.swift in Sources */,
 				C34CBCA9251C06280019D188 /* StarShip.swift in Sources */,
