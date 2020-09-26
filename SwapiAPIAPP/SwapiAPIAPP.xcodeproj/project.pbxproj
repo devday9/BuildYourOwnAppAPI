@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C30906B8251FE97600859956 /* StarshipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30906B7251FE97600859956 /* StarshipTableViewCell.swift */; };
 		C34CBC89251BFD740019D188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBC88251BFD740019D188 /* AppDelegate.swift */; };
 		C34CBC8B251BFD740019D188 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBC8A251BFD740019D188 /* SceneDelegate.swift */; };
 		C34CBC90251BFD740019D188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34CBC8E251BFD740019D188 /* Main.storyboard */; };
@@ -16,10 +17,10 @@
 		C34CBCAD251C0A600019D188 /* StarShipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBCAC251C0A600019D188 /* StarShipController.swift */; };
 		C34CBCB0251C0BB10019D188 /* StarShipError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBCAF251C0BB10019D188 /* StarShipError.swift */; };
 		C34CBD50251D4B4A0019D188 /* StarshipListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBD4F251D4B4A0019D188 /* StarshipListTableViewController.swift */; };
-		C34CBD53251D4B5F0019D188 /* StarshipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CBD52251D4B5F0019D188 /* StarshipDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C30906B7251FE97600859956 /* StarshipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipTableViewCell.swift; sourceTree = "<group>"; };
 		C34CBC85251BFD740019D188 /* SwapiAPIAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwapiAPIAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34CBC88251BFD740019D188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C34CBC8A251BFD740019D188 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +32,6 @@
 		C34CBCAC251C0A600019D188 /* StarShipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipController.swift; sourceTree = "<group>"; };
 		C34CBCAF251C0BB10019D188 /* StarShipError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipError.swift; sourceTree = "<group>"; };
 		C34CBD4F251D4B4A0019D188 /* StarshipListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipListTableViewController.swift; sourceTree = "<group>"; };
-		C34CBD52251D4B5F0019D188 /* StarshipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C30906B6251FE95300859956 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				C30906B7251FE97600859956 /* StarshipTableViewCell.swift */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
 		C34CBC7C251BFD740019D188 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +104,7 @@
 		C34CBCA1251BFDDC0019D188 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C30906B6251FE95300859956 /* CustomViews */,
 				C34CBCA3251BFDF20019D188 /* StoryBoards */,
 			);
 			path = Views;
@@ -138,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				C34CBD4F251D4B4A0019D188 /* StarshipListTableViewController.swift */,
-				C34CBD52251D4B5F0019D188 /* StarshipDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -214,8 +222,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34CBC89251BFD740019D188 /* AppDelegate.swift in Sources */,
-				C34CBD53251D4B5F0019D188 /* StarshipDetailViewController.swift in Sources */,
 				C34CBD50251D4B4A0019D188 /* StarshipListTableViewController.swift in Sources */,
+				C30906B8251FE97600859956 /* StarshipTableViewCell.swift in Sources */,
 				C34CBCAD251C0A600019D188 /* StarShipController.swift in Sources */,
 				C34CBC8B251BFD740019D188 /* SceneDelegate.swift in Sources */,
 				C34CBCA9251C06280019D188 /* StarShip.swift in Sources */,

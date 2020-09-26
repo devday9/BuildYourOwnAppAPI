@@ -15,7 +15,7 @@ class StarshipListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        fetchStarships()
+       fetchStarships()
     }
 
     //MARK: - Helpers
@@ -41,23 +41,12 @@ class StarshipListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "starshipCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "starshipCell", for: indexPath) as? StarshipTableViewCell
+        else {return UITableViewCell()}
         
-//        let starship = starships[indexPath.row]
+        let starship = starships[indexPath.row]
+        cell.starship = starship
 
         return cell
-    }
-
-    // MARK: - Navigation
-
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showStarshipSegue" {
-            guard let destination = segue.destination as? StarshipDetailViewController else {return}
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let starship = StarShipController.shared.starships[indexPath.row]
-                destination.starship = starship
-            }
-        }
     }
 }//END OF CLASS
